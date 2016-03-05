@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{367507DC-2A5D-4BF9-AEAC-57661336F551}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VaultTech</RootNamespace>
+    <AssemblyName>VaultTech</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework, Version=3.3.0.2184, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression">
+      <Aliases>global</Aliases>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <Aliases>global</Aliases>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Algorithms\MinHeap.cs" />
+    <Compile Include="Algorithms\Pathfinding\ClearanceBasedAstar\Astar.cs" />
+    <Compile Include="Algorithms\Pathfinding\ClearanceBasedAstar\AstarGrid.cs" />
+    <Compile Include="Algorithms\Pathfinding\ClearanceBasedAstar\AstarManager.cs" />
+    <Compile Include="Algorithms\Pathfinding\ClearanceBasedAstar\Node.cs" />
+    <Compile Include="Algorithms\Pathfinding\Waypoint.cs" />
+    <Compile Include="Camera.cs" />
+    <Compile Include="Contents\FileManager.cs" />
+    <Compile Include="Contents\MapReader.cs" />
+    <Compile Include="Contents\MapWriter.cs" />
+    <Compile Include="Contents\StreamTexture.cs" />
+    <Compile Include="ExceptionHandler.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="Graphics\Animation.cs" />
+    <Compile Include="Graphics\CombineTextures.cs" />
+    <Compile Include="Graphics\CropTexture.cs" />
+    <Compile Include="Graphics\FontRenderer\CharacterData.cs" />
+    <Compile Include="Graphics\FontRenderer\Character.cs" />
+    <Compile Include="Graphics\FontRenderer\FontRenderer.cs" />
+    <Compile Include="Graphics\MapContent\FogOfWarLayer.cs" />
+    <Compile Include="Graphics\MapContent\Layer.cs" />
+    <Compile Include="Graphics\MapContent\Map.cs" />
+    <Compile Include="Graphics\MapContent\Tile.cs" />
+    <Compile Include="Graphics\MapContent\TileBank.cs" />
+    <Compile Include="Graphics\MapContent\TileSheet.cs" />
+    <Compile Include="Graphics\ParticleSystem\OldParticle.cs" />
+    <Compile Include="Graphics\ParticleSystem\OldParticleManager.cs" />
+    <Compile Include="Graphics\ParticleSystem\Particle.cs" />
+    <Compile Include="Graphics\ParticleSystem\ParticleEmitter.cs" />
+    <Compile Include="Graphics\ParticleSystem\ParticleProperties .cs" />
+    <Compile Include="Initialize.cs" />
+    <Compile Include="MouseCursor.cs" />
+    <Compile Include="Network\Client.cs" />
+    <Compile Include="Network\Packet.cs" />
+    <Compile Include="Network\Server.cs" />
+    <Compile Include="Physics\CollisionDetection\AABB.cs" />
+    <Compile Include="Physics\CollisionDetection\Circle.cs" />
+    <Compile Include="Physics\CollisionDetection\LineSegment.cs" />
+    <Compile Include="Physics\PhysicsObject.cs" />
+    <Compile Include="Physics\Projectile.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenManager\Screen.cs" />
+    <Compile Include="ScreenManager\ScreenManager.cs" />
+    <Compile Include="SystemInformation.cs" />
+    <Compile Include="UI\Background.cs" />
+    <Compile Include="UI\Button.cs" />
+    <Compile Include="UI\CheckBox.cs" />
+    <Compile Include="UI\Container.cs" />
+    <Compile Include="UI\Component.cs" />
+    <Compile Include="UI\ComponentTexture.cs" />
+    <Compile Include="UI\ConsoleComponents\Console.cs" />
+    <Compile Include="UI\ConsoleComponents\ConsolePanel.cs" />
+    <Compile Include="UI\DropDownMenuComponents\DropDownMenu.cs" />
+    <Compile Include="UI\DropDownMenuComponents\DropDownMenuPanel.cs" />
+    <Compile Include="UI\Label.cs" />
+    <Compile Include="UI\MenuComponents\Menu.cs" />
+    <Compile Include="UI\MenuComponents\MenuItem.cs" />
+    <Compile Include="UI\MenuStripComponents\MenuStrip.cs" />
+    <Compile Include="UI\MenuStripComponents\MenuStripItem.cs" />
+    <Compile Include="UI\MenuStripComponents\MenuStripPanel.cs" />
+    <Compile Include="UI\MessageBox.cs" />
+    <Compile Include="UI\MessageBoxManager.cs" />
+    <Compile Include="UI\MouseRectangle.cs" />
+    <Compile Include="UI\PanelComponents\Panel.cs" />
+    <Compile Include="UI\PanelComponents\Scrollbar\HorizontalScrollbar.cs" />
+    <Compile Include="UI\PanelComponents\Scrollbar\Sliders\HorizontalSlider.cs" />
+    <Compile Include="UI\PanelComponents\Scrollbar\Sliders\VerticalSlider.cs" />
+    <Compile Include="UI\PanelComponents\Scrollbar\VerticalScrollbar.cs" />
+    <Compile Include="UI\TextBoxComponents\TextBox.cs" />
+    <Compile Include="UI\TextBoxComponents\TextBoxHelper.cs" />
+    <Compile Include="UI\WindowComponents\Window.cs" />
+    <Compile Include="UI\WindowComponents\WindowManager.cs" />
+    <Compile Include="UI\WindowComponents\WindowTitleBar.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Audio\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
